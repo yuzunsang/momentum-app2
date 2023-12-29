@@ -8,4 +8,6 @@ const pickImage = images[~~(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 bgImage.src = `img/${pickImage}`;
+bgImage.className = "bgimage";
+
 document.body.appendChild(bgImage);
