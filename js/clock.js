@@ -16,7 +16,6 @@ function getClock() {
     hr -= 12;
   }
 
-  hr = hr.toString().padStart(2, "0");
   const min = date.getMinutes().toString().padStart(2, "0");
   const sec = date.getSeconds().toString().padStart(2, "0");
 
