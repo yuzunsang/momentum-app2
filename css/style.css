@@ -2,6 +2,7 @@
   display: none;
 }
 
+/* bgimage 비율 맞추기 */
 .bgimage {
   position: absolute;
   width: 100%;
