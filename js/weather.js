@@ -1,3 +1,4 @@
+// apikey 숨기기
 const API_KEY = config.apikey;
 
 function onGeoOk(position) {
