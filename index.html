@@ -13,6 +13,8 @@
     />
   </head>
   <body>
+    <!-- 디렉토리 구조화 작업 필요 -->
+    <!-- wrapper로 묶기 -->
     <div class="welcome font-ko">
       <span class="welcome__title">쉽고 동적인 웹사이트.</span>
       <span class="welcome__title">지금 시작하세요.</span>
@@ -21,8 +23,8 @@
       </button>
     </div>
 
-    <div class="modal hidden">
-      <form class="login-form card hidden">
+    <div class="modal font-ko hidden">
+      <form class="login-form card">
         <label>
           <span>사용자 이름</span>
           <input
@@ -38,75 +40,51 @@
       </form>
     </div>
 
+    <!-- 네비게이션 바 아이콘 / 시계 / 날씨 (space-between) -->
     <header>
-      <!-- snb 안에 투두리스트 작성 -->
-      <form class="todo-form hidden">
-        <input
-          type="text"
-          placeholder="Write to do and Press enter!"
-          required
-        />
-      </form>
-      <ul class="todo-list hidden"></ul>
+      <div>
+        <span>SideBar 위치</span>
+      </div>
 
-      <h2 class="clock hidden">AM 9:00:00</h2>
+      <div>
+        <h2 class="clock">AM 9:00:00</h2>
+      </div>
 
-      <div id="weather hidden">
+      <div id="weather">
         <span></span>
         <span></span>
       </div>
     </header>
 
-    <main>
-      <h1 class="greeting hidden"></h1>
+    <!-- 사이드 바 만들기 -->
+    <div class="sidebar-wrapper">
+      <button class="sidebar__btn">SideBar Open</button>
 
-      <form class="logout-form hidden">
-        <input class="logout-submit" type="submit" value="Log Out" />
-      </form>
-      <!-- website link 블록 - grid -->
-    </main>
+      <aside class="sidebar">
+        <h1 class="greeting hidden"></h1>
 
-    <footer>
-      <div class="quote hidden">
-        <span></span>
-        <span></span>
-      </div>
-    </footer>
+        <form class="logout-form hidden">
+          <input class="logout-submit" type="submit" value="Log Out" />
+        </form>
 
-    <!-- experiment -->
-    <script type="text/javascript">
-      (function () {
-        const persist = 2500;
-        const textIds = ["text_1", "text_2", "text_3"];
+        <form class="todo-form">
+          <input
+            type="text"
+            placeholder="Write to do and Press enter!"
+            required
+          />
+        </form>
+        <ul class="todo-list"></ul>
 
-        const turnOnTransition = (el) => {
-          el.classList.add("transitionOn");
-          setTimeout(() => {
-            el.classList.remove("transitionOn");
-          }, persist);
-        };
+        <div class="quote">
+          <span></span>
+          <span></span>
+        </div>
+      </aside>
 
-        const runTransition = (id) => {
-          const el = document.getElementById(id);
+      <button class="sidebar__btn">SideBar Close</button>
+    </div>
 
-          if (el) {
-            setTimeout(() => {
-              turnOnTransition(el);
-
-              setInterval(() => {
-                turnOnTransition(el);
-              }, persist * textIds.length);
-            }, 1);
-          }
-        };
-
-        textIds.forEach((id, index) => {
-          setTimeout(() => {
-            runTransition(id);
-          }, index * persist);
-        });
-      })();
-    </script>
     <script type="text/javascript" src="js/apikey.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/greeting.js"></script>
