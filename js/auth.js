@@ -7,8 +7,8 @@ const welcomeBtn = document.querySelector(".welcome__btn");
 const modal = document.querySelector(".modal");
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-input");
-// const logoutForm = document.querySelector(".logout-form");
-// const greeting = document.querySelector(".greeting");
+const logoutForm = document.querySelector(".logout-form");
+const greeting = document.querySelector(".greeting");
 
 const HIDDEN_KEY = "hidden";
 const USERNAME_KEY = "username";
@@ -22,11 +22,8 @@ if (!savedUsername) {
 }
 // 저장된 username이 있다면 wrapper를 보여주기
 else {
-  //   wrapper.classList.remove(HIDDEN_KEY);
-  //   auth.classList.add(HIDDEN_KEY);
-
-  paintWrapper(savedUsername);
-  //   paintGreetings(savedUsername);
+  paintWrapper();
+  paintGreetings(savedUsername);
 }
 
 function onStartBtn() {
@@ -41,31 +38,30 @@ function onLoginSubmit(event) {
   localStorage.setItem(USERNAME_KEY, username);
 
   // 히든 클래스 초기화한 후 wrapper 보여주기
-  paintWrapper(username);
-  //   paintGreetings(username);
+  paintWrapper();
+  paintGreetings(username);
 }
 
-function paintWrapper(username) {
+function paintWrapper() {
   auth.classList.add(HIDDEN_KEY);
   welcome.classList.remove(HIDDEN_KEY);
   modal.classList.add(HIDDEN_KEY);
   wrapper.classList.remove(HIDDEN_KEY);
 }
 
-// function onLogoutSubmit() {
-//   // localStorage의 username을 지우고 새로고침
-//   localStorage.removeItem(USERNAME_KEY);
-//   window.location.reload();
-// }
+function onLogoutSubmit() {
+  // localStorage의 username을 지우고 새로고침
+  localStorage.removeItem(USERNAME_KEY);
+  window.location.reload();
+}
 
-// function paintGreetings(username) {
-//   loginForm.classList.add(HIDDEN_KEY);
-//   greeting.classList.remove(HIDDEN_KEY);
-//   logoutForm.classList.remove(HIDDEN_KEY);
-//   greeting.innerText = `Hello ${username}`;
-// }
+function paintGreetings(username) {
+  greeting.classList.remove(HIDDEN_KEY);
+  logoutForm.classList.remove(HIDDEN_KEY);
+  greeting.innerText = `안녕하세요 ${username}님.`;
+}
 
 welcomeBtn.addEventListener("click", onStartBtn);
 
 loginForm.addEventListener("submit", onLoginSubmit);
-// logoutForm.addEventListener("submit", onLogoutSubmit);
+logoutForm.addEventListener("submit", onLogoutSubmit);

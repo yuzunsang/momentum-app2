@@ -1,0 +1,25 @@
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+#header > div {
+  width: 33%;
+  line-height: 50px;
+}
+
+.sidebar {
+  text-align: left;
+}
+
+.clockLIVE {
+  text-align: center;
+}
+
+.weather {
+  text-align: end;
+}

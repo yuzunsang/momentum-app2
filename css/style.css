@@ -1,17 +1,23 @@
 @import url(/css/reset.css);
-@import url(/css/background.css);
 @import url(/css/variables.css);
 
-/* UI */
-@import url(/css/UI/card.css);
-
 /* components */
-@import url(/css/components/welcome.css);
-@import url(/css/components/modal.css);
+@import url(/css/components/card.css);
+
+/* screens */
+@import url(/css/screens/background.css);
+@import url(/css/screens/welcome.css);
+@import url(/css/screens/modal.css);
+@import url(/css/screens/header.css);
 
 * {
   box-sizing: border-box;
 }
+
+#wrapper {
+  position: relative;
+}
+
 .hidden {
   display: none;
 }
