@@ -26,8 +26,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 20%;
-  min-width: 500px;
+  width: 50%;
+  max-width: 500px;
   height: 40%;
 }
 
@@ -57,12 +57,13 @@
 }
 
 .login-submit {
-  font-size: 1rem;
-  padding: 20px 40px;
-  background: skyblue;
-  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  background: #fff;
   cursor: pointer;
 }
 .login-submit:hover {
-  background: rgb(96, 147, 167);
+  background: var(--gradation-light);
 }

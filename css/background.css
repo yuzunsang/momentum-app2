@@ -9,6 +9,6 @@
   bottom: 0;
   z-index: -1;
   opacity: 80%;
-  filter: brightness(70%);
+  filter: brightness(50%);
   object-fit: cover;
 }

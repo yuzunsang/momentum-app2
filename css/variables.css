@@ -1,0 +1,4 @@
+:root {
+  --gradation: linear-gradient(to right, #fa1511, #0d56c4);
+  --gradation-light: linear-gradient(to right, #fa7f7c, #658ac2);
+}

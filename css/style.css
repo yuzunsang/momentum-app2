@@ -1,5 +1,6 @@
 @import url(/css/reset.css);
 @import url(/css/background.css);
+@import url(/css/variables.css);
 
 /* UI */
 @import url(/css/UI/card.css);

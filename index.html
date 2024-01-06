@@ -14,8 +14,11 @@
   </head>
   <body>
     <div class="welcome font-ko">
-      <h1 class="welcome__title">쉽고 동적인 웹사이트를 지금 시작하세요</h1>
-      <button class="welcome__btn">로그인하고 시작하기</button>
+      <span class="welcome__title">쉽고 동적인 웹사이트.</span>
+      <span class="welcome__title">지금 시작하세요.</span>
+      <button class="welcome__btn">
+        <span>로그인하고 시작하기</span>
+      </button>
     </div>
 
     <div class="modal hidden">
@@ -31,7 +34,7 @@
             autocomplete="off"
           />
         </label>
-        <input class="login-submit" type="submit" value="Log In" />
+        <input class="login-submit" type="submit" value="로그인" />
       </form>
     </div>
 
@@ -70,6 +73,40 @@
       </div>
     </footer>
 
+    <!-- experiment -->
+    <script type="text/javascript">
+      (function () {
+        const persist = 2500;
+        const textIds = ["text_1", "text_2", "text_3"];
+
+        const turnOnTransition = (el) => {
+          el.classList.add("transitionOn");
+          setTimeout(() => {
+            el.classList.remove("transitionOn");
+          }, persist);
+        };
+
+        const runTransition = (id) => {
+          const el = document.getElementById(id);
+
+          if (el) {
+            setTimeout(() => {
+              turnOnTransition(el);
+
+              setInterval(() => {
+                turnOnTransition(el);
+              }, persist * textIds.length);
+            }, 1);
+          }
+        };
+
+        textIds.forEach((id, index) => {
+          setTimeout(() => {
+            runTransition(id);
+          }, index * persist);
+        });
+      })();
+    </script>
     <script type="text/javascript" src="js/apikey.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/greeting.js"></script>
