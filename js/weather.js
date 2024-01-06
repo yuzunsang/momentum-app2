@@ -8,8 +8,8 @@ function onGeoOk(position) {
 
   fetch(url).then((response) =>
     response.json().then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector(".weather span:first-child");
+      const city = document.querySelector(".weather span:last-child");
       weather.innerText = `현재 위치 : ${data.name}`;
       city.innerText = `현재 기온 : ${~~data.main.temp}°C 현재 날씨 : ${
         data.weather[0].description

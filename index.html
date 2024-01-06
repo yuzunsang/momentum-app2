@@ -13,81 +13,76 @@
     />
   </head>
   <body>
-    <!-- 디렉토리 구조화 작업 필요 -->
-    <!-- wrapper로 묶기 -->
-    <div class="welcome font-ko">
-      <span class="welcome__title">쉽고 동적인 웹사이트.</span>
-      <span class="welcome__title">지금 시작하세요.</span>
-      <button class="welcome__btn">
-        <span>로그인하고 시작하기</span>
-      </button>
+    <div id="auth" class="hidden">
+      <div class="welcome">
+        <span class="welcome__title">쉽고 동적인 웹사이트.</span>
+        <span class="welcome__title">지금 시작하세요.</span>
+        <button class="welcome__btn">
+          <span>로그인하고 시작하기</span>
+        </button>
+      </div>
+
+      <div class="modal hidden">
+        <form class="login-form card">
+          <label>
+            <span>사용자 이름</span>
+            <input
+              class="login-input"
+              required
+              maxlength="15"
+              type="text"
+              placeholder="이름 입력"
+              autocomplete="off"
+            />
+          </label>
+          <input class="login-submit" type="submit" value="로그인" />
+        </form>
+      </div>
     </div>
 
-    <div class="modal font-ko hidden">
-      <form class="login-form card">
-        <label>
-          <span>사용자 이름</span>
-          <input
-            class="login-input"
-            required
-            maxlength="15"
-            type="text"
-            placeholder="이름 입력"
-            autocomplete="off"
-          />
-        </label>
-        <input class="login-submit" type="submit" value="로그인" />
-      </form>
-    </div>
+    <div id="wrapper" class="hidden">
+      <div id="header">
+        <div class="sidebar">
+          <button>닫기</button>
+        </div>
+        <!-- greeting -->
+        <!-- logout -->
+        <!-- todoform -->
+        <!-- quote -->
 
-    <!-- 네비게이션 바 아이콘 / 시계 / 날씨 (space-between) -->
-    <header>
-      <div>
-        <span>SideBar 위치</span>
-      </div>
+        <div>
+          <h2 class="clock">AM 9:00:00</h2>
+        </div>
 
-      <div>
-        <h2 class="clock">AM 9:00:00</h2>
-      </div>
-
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
-    </header>
-
-    <!-- 사이드 바 만들기 -->
-    <div class="sidebar-wrapper">
-      <button class="sidebar__btn">SideBar Open</button>
-
-      <aside class="sidebar">
-        <h1 class="greeting hidden"></h1>
-
-        <form class="logout-form hidden">
-          <input class="logout-submit" type="submit" value="Log Out" />
-        </form>
-
-        <form class="todo-form">
-          <input
-            type="text"
-            placeholder="Write to do and Press enter!"
-            required
-          />
-        </form>
-        <ul class="todo-list"></ul>
-
-        <div class="quote">
+        <div class="weather">
           <span></span>
           <span></span>
         </div>
-      </aside>
+      </div>
 
-      <button class="sidebar__btn">SideBar Close</button>
+      <div id="main">
+        <!-- links -->
+      </div>
     </div>
 
+    <!-- <h1 class="greeting hidden"></h1>
+
+    <form class="logout-form hidden">
+      <input class="logout-submit" type="submit" value="Log Out" />
+    </form>
+
+    <form class="todo-form">
+      <input type="text" placeholder="Write to do and Press enter!" required />
+    </form>
+    <ul class="todo-list"></ul>
+
+    <div class="quote">
+      <span></span>
+      <span></span>
+    </div> -->
+
     <script type="text/javascript" src="js/apikey.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/greeting.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
