@@ -1,12 +1,24 @@
 @import url(/css/reset.css);
 @import url(/css/background.css);
 
+/* UI */
+@import url(/css/UI/card.css);
+
+/* components */
+@import url(/css/components/welcome.css);
+@import url(/css/components/modal.css);
+
+* {
+  box-sizing: border-box;
+}
 .hidden {
   display: none;
 }
 
-body {
+/* fonts */
+.font-en {
+  font-family: "Roboto", sans-serif;
+}
+.font-ko {
   font-family: "Noto Sans KR", sans-serif;
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
 }

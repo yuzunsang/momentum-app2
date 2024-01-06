@@ -8,47 +8,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Nunito:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <form class="login-form hidden">
-      <input
-        class="login-input"
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is yout name?"
-      />
-      <input class="login-submit" type="submit" value="Log In" />
-    </form>
-
-    <h1 class="greeting hidden"></h1>
-
-    <form class="logout-form hidden">
-      <input class="logout-submit" type="submit" value="Log Out" />
-    </form>
-
-    <h2 class="clock">AM 9:00:00</h2>
-
-    <form class="todo-form">
-      <input type="text" placeholder="Write to do and Press enter!" required />
-    </form>
-
-    <ul class="todo-list"></ul>
-
-    <div class="quote">
-      <span></span>
-      <span></span>
+    <div class="welcome font-ko">
+      <h1 class="welcome__title">쉽고 동적인 웹사이트를 지금 시작하세요</h1>
+      <button class="welcome__btn">로그인하고 시작하기</button>
     </div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div class="modal hidden">
+      <form class="login-form card hidden">
+        <label>
+          <span>사용자 이름</span>
+          <input
+            class="login-input"
+            required
+            maxlength="15"
+            type="text"
+            placeholder="이름 입력"
+            autocomplete="off"
+          />
+        </label>
+        <input class="login-submit" type="submit" value="Log In" />
+      </form>
     </div>
+
+    <header>
+      <!-- snb 안에 투두리스트 작성 -->
+      <form class="todo-form hidden">
+        <input
+          type="text"
+          placeholder="Write to do and Press enter!"
+          required
+        />
+      </form>
+      <ul class="todo-list hidden"></ul>
+
+      <h2 class="clock hidden">AM 9:00:00</h2>
+
+      <div id="weather hidden">
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="greeting hidden"></h1>
+
+      <form class="logout-form hidden">
+        <input class="logout-submit" type="submit" value="Log Out" />
+      </form>
+      <!-- website link 블록 - grid -->
+    </main>
+
+    <footer>
+      <div class="quote hidden">
+        <span></span>
+        <span></span>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="js/apikey.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
