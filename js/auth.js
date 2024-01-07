@@ -52,6 +52,7 @@ function paintWrapper() {
 function onLogoutSubmit() {
   // localStorage의 username을 지우고 새로고침
   localStorage.removeItem(USERNAME_KEY);
+  wrapper.classList.add(HIDDEN_KEY);
   window.location.reload();
 }
 

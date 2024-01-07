@@ -22,7 +22,7 @@ body {
   height: 100vh;
 }
 
-#wrapper {
+.wrapper-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
