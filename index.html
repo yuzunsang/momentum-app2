@@ -40,10 +40,31 @@
       </div>
     </div>
 
+    <aside id="sidebar" class="">
+      <div class="sidebar-container">
+        <h1 class="greeting hidden"></h1>
+
+        <form class="logout-form hidden">
+          <input class="logout-submit" type="submit" value="로그아웃" />
+        </form>
+
+        <div class="todo-wrapper">
+          <form class="todo-form">
+            <input
+              type="text"
+              placeholder="Write to do and Press enter!"
+              required
+            />
+          </form>
+          <ul class="todo-list"></ul>
+        </div>
+      </div>
+    </aside>
+
     <div id="wrapper" class="hidden">
       <div id="header">
         <div class="sidebar">
-          <button>네비게이션 바 열기</button>
+          <button>사이드바 열기</button>
           <!-- greeting -->
           <!-- logout -->
           <!-- todoform -->
@@ -104,17 +125,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <h1 class="greeting hidden"></h1>
-
-    <form class="logout-form hidden">
-      <input class="logout-submit" type="submit" value="로그아웃" />
-    </form> -->
-
-    <!-- <form class="todo-form">
-      <input type="text" placeholder="Write to do and Press enter!" required />
-    </form>
-    <ul class="todo-list"></ul> -->
 
     <script type="text/javascript" src="js/apikey.js"></script>
     <script src="js/background.js"></script>
