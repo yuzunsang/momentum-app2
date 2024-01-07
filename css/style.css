@@ -1,3 +1,15 @@
+@import "reset.css";
+@import "variables.css";
+
+@import "components/card.css";
+
+@import "screens/background.css";
+@import "screens/footer.css";
+@import "screens/header.css";
+@import "screens/main.css";
+@import "screens/sidebar.css";
+@import "screens/welcome.css";
+
 * {
   box-sizing: border-box;
 }
