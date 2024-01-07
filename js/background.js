@@ -6,7 +6,7 @@ const images = [
 const pickImage = images[~~(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
-bgImage.src = `img/${pickImage}`;
+bgImage.src = `img/bg/${pickImage}`;
 bgImage.className = "bgimage";
 bgImage.classList.add("kenburns-top");
 

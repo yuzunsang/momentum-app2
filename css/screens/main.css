@@ -14,6 +14,7 @@
   gap: 15px;
 }
 .main-container div {
+  background: var(--gradation-light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,13 +24,21 @@
   transition: transform 150ms cubic-bezier(0.39, 0.575, 0.565, 1);
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  font-weight: 700;
 }
 .main-container div:hover {
   transform: scale(1.1, 1.1);
 }
+.main-container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .main-container img {
   width: 50px;
   height: 50px;
+  margin-bottom: 10px;
 }
 .main-container a {
   text-decoration: none;
