@@ -1,17 +1,15 @@
-@import url(/css/reset.css);
-@import url(/css/variables.css);
+@import "reset.css";
+@import "variables.css";
 
-/* components */
-@import url(/css/components/card.css);
+@import "components/card.css";
 
-/* screens */
-@import url(/css/screens/background.css);
-@import url(/css/screens/welcome.css);
-@import url(/css/screens/modal.css);
-@import url(/css/screens/header.css);
-@import url(/css/screens/main.css);
-@import url(/css/screens/footer.css);
-@import url(/css/screens/sidebar.css);
+@import "screens/background.css";
+@import "screens/footer.css";
+@import "screens/header.css";
+@import "screens/main.css";
+@import "screens/modal.css";
+@import "screens/sidebar.css";
+@import "screens/welcome.css";
 
 * {
   box-sizing: border-box;
