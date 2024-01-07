@@ -1,18 +1,3 @@
-@import url(./reset.css);
-@import url(./variables.css);
-
-/* components */
-@import url(./components/card.css);
-
-/* screens */
-@import url(./screens/background.css);
-@import url(./screens/welcome.css);
-@import url(./screens/modal.css);
-@import url(./screens/header.css);
-@import url(./screens/main.css);
-@import url(./screens/footer.css);
-@import url(./screens/sidebar.css);
-
 * {
   box-sizing: border-box;
 }
