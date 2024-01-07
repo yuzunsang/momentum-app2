@@ -10,6 +10,25 @@ const loginInput = document.querySelector(".login-input");
 const logoutForm = document.querySelector(".logout-form");
 const greeting = document.querySelector(".greeting");
 
+// background.js migration
+const images = [
+  "neom-THlO6Mkf5uI-unsplash (1).jpg",
+  "thomas-de-luze-jrjc4CsZmaw-unsplash.jpg",
+  "sarah-sheedy-rVYKYyKbqE8-unsplash.jpg",
+];
+
+// 로그인 과정이 끝나면 이 함수가 실행되게
+function paintBgImg() {
+  const pickImage = images[~~(Math.random() * images.length)];
+  const bgImage = document.createElement("img");
+
+  bgImage.src = `img/bg/${pickImage}`;
+  bgImage.className = "bgimage";
+  bgImage.classList.add("kenburns-top");
+
+  document.body.appendChild(bgImage);
+}
+
 const HIDDEN_KEY = "hidden";
 const USERNAME_KEY = "username";
 
@@ -24,6 +43,7 @@ if (!savedUsername) {
 else {
   paintWrapper();
   paintGreetings(savedUsername);
+  paintBgImg();
 }
 
 function onStartBtn() {
@@ -40,6 +60,7 @@ function onLoginSubmit(event) {
   // 히든 클래스 초기화한 후 wrapper 보여주기
   paintWrapper();
   paintGreetings(username);
+  paintBgImg();
 }
 
 function paintWrapper() {
