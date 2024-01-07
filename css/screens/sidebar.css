@@ -5,7 +5,10 @@
   left: 0;
   width: 0;
   z-index: 99;
-  background-color: rgb(248, 167, 153);
+  background: var(--gradation-light);
+}
+#sidebar button {
+  cursor: pointer;
 }
 
 .sidebar__close-btn {
@@ -29,6 +32,11 @@
   height: 30px;
   text-align: end;
 }
+.logout-submit:hover {
+  background: rgb(255, 0, 0);
+  color: white;
+  font-weight: bold;
+}
 .todo-wrapper {
   min-height: 100px;
 }
@@ -46,7 +54,6 @@
 .todo-form input:focus {
   outline: none;
   border-color: skyblue;
-  color: rgba(255, 255, 255, 0.9);
 }
 .todo-list {
   padding: 10px;
@@ -54,8 +61,26 @@
 }
 .todo-list li {
   margin: 10px;
+  padding: 10px;
   font-size: 1.1rem;
+}
+.todo-list li:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 .todo-list li > span {
   margin-right: 5px;
+}
+
+/* 핫픽스 - 버튼 css */
+.sidebar-btn__prettier {
+  padding: 5px;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-weight: bold;
+}
+.sidebar-btn__prettier:hover {
+  background: var(--gradation-light);
+  background: skyblue;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
 }

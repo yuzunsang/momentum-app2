@@ -1,7 +1,7 @@
 #header {
   width: 100%;
   height: 50px;
-  background-color: skyblue;
+  background: transparent;
   display: flex;
   padding: 0 20px;
 }
@@ -11,8 +11,8 @@
   line-height: 50px;
 }
 
-.sidebar {
-  text-align: left;
+.sidebar__open-btn {
+  cursor: pointer;
 }
 
 .clock-container {
