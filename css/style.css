@@ -9,13 +9,23 @@
 @import url(/css/screens/welcome.css);
 @import url(/css/screens/modal.css);
 @import url(/css/screens/header.css);
+@import url(/css/screens/main.css);
+@import url(/css/screens/footer.css);
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 #wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .hidden {
